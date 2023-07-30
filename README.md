@@ -1,6 +1,6 @@
 # Simple Currency Converter App
 
-A a simple currency converter app built using React.js. It allows users to convert between different currencies using real-time exchange rates.
+A simple currency converter app built using React.js. It allows users to convert between different currencies using real-time exchange rates.
 
 ## Features
 
@@ -15,9 +15,8 @@ You can try out a live demo of the application [here](https://currency-app-etema
 
 ## Technologies Used
 
-- React.js
-- HTML5
-- CSS3
+- React.js: A JavaScript library for building user interfaces.
+- HTML and CSS: For the basic structure and styling.
 - Exchange rate API (https://www.frankfurter.app/)
 
 ## Installation
@@ -32,5 +31,5 @@ To run the application locally, follow these steps:
 
 ## Acknowledgements
 
-- This project was inspired by the need for an easy-to-use travel checklist application.
+- This project was inspired by the need for an easy-to-use currency converter application.
 - Special thanks to the [React.js](https://reactjs.org/) community for providing a powerful and flexible framework.

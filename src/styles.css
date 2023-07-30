@@ -8,13 +8,11 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
-  height: 100%;
 }
 
 body {
@@ -28,18 +26,15 @@ body {
       rgba(80, 71, 70, 0.75)
     ),
     url('bg.jpg') no-repeat center center/cover;
-  background-repeat: fixed;
+  background-attachment: scroll;
   color: #141e37;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-  width: 45rem;
-  min-height: 35rem;
+  margin: 3rem auto;
+  width: 35rem;
+  max-width: 35rem;
   background-color: #fff;
   padding: 4rem;
   border-radius: 2rem;
@@ -119,5 +114,16 @@ label {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    background-attachment: fixed;
+  }
+
+  .container {
+    width: 45rem;
+    max-width: 45rem;
   }
 }

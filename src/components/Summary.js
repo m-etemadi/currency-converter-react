@@ -1,14 +1,6 @@
-import { getCurrentDate } from './getCurrentDate';
+import { fixCurrency, getCurrentDateTime } from './helper';
 
 export default function Summary({ amount, from, to, converted }) {
-  function fixedCurrency(data) {
-    const maxDigit = {
-      maximumFractionDigits: 0,
-    };
-
-    return data >= 1000 ? data.toLocaleString(undefined, maxDigit) : data;
-  }
-
   return (
     <div className="summary">
       {amount < 1 ? (
@@ -16,15 +8,17 @@ export default function Summary({ amount, from, to, converted }) {
       ) : (
         <>
           <p className="from-amount">
-            {fixedCurrency(amount)} {from} =
+            {fixCurrency(amount)} {from} =
           </p>
           <p className="to-amount">
-            {fixedCurrency(converted)} {to}
+            {fixCurrency(converted)} {to}
           </p>
         </>
       )}
 
-      {amount > 0 && <p className="date">Last updated {getCurrentDate()}</p>}
+      {amount > 0 && (
+        <p className="date">Last updated {getCurrentDateTime()}</p>
+      )}
     </div>
   );
 }

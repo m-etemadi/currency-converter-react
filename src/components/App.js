@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { fixCurrency } from './helper';
 import Loader from './Loader';
 import ErrorMessage from './ErrorMessage';
 import Form from './Form';
@@ -42,7 +43,7 @@ export default function App() {
   );
 
   useEffect(function () {
-    document.title = `${amount} ${from} to ${to}`;
+    document.title = `${fixCurrency(amount)} ${from} to ${to}`;
 
     return function () {
       document.title = 'Currency converter';

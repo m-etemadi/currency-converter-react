@@ -4,7 +4,7 @@ export default function Form({ amount, setAmount, setFrom, setTo, from, to }) {
       <div>
         <label>Amount</label>
         <input
-          type="text"
+          type="number"
           value={amount}
           onChange={e => setAmount(+e.target.value)}
           className="field"
