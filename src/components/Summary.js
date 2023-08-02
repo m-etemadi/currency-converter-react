@@ -1,4 +1,4 @@
-import { fixCurrency, getCurrentDateTime } from './helper';
+import { fixCurrency, getCurrentDateTime } from '../helper';
 
 export default function Summary({ amount, from, to, converted }) {
   return (

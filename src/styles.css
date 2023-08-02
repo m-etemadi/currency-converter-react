@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.6;
   background: linear-gradient(
@@ -28,7 +28,7 @@ body {
     url('bg.jpg') no-repeat center center/cover;
   background-attachment: scroll;
   color: #141e37;
-  min-height: 100vh;
+  min-height: calc(100vh - 2 * 3rem);
 }
 
 .container {
@@ -75,14 +75,14 @@ label {
 }
 
 .from-amount {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #5c667b;
   margin-bottom: 0.6rem;
 }
 
 .to-amount {
-  font-size: 3.2rem;
+  font-size: 2.7rem;
   font-weight: 500;
   color: #2e3c57;
 }
@@ -117,13 +117,22 @@ label {
   }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 58rem) {
   body {
+    font-size: 1.6rem;
     background-attachment: fixed;
   }
 
   .container {
     width: 45rem;
     max-width: 45rem;
+  }
+
+  .from-amount {
+    font-size: 2.5rem;
+  }
+
+  .to-amount {
+    font-size: 3.2rem;
   }
 }

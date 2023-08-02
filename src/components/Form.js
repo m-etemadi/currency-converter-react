@@ -5,8 +5,9 @@ export default function Form({ amount, setAmount, setFrom, setTo, from, to }) {
         <label>Amount</label>
         <input
           type="number"
+          min={0}
           value={amount}
-          onChange={e => setAmount(+e.target.value)}
+          onChange={e => setAmount(+e.target.value.slice(0, 12))}
           className="field"
         />
       </div>
