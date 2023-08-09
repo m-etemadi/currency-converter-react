@@ -6,6 +6,7 @@ export default function Form({ amount, setAmount, setFrom, setTo, from, to }) {
         <input
           type="number"
           min={0}
+          max={999000000000}
           value={amount}
           onChange={e => setAmount(+e.target.value.slice(0, 12))}
           className="field"
